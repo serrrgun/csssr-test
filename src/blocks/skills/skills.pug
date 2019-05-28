@@ -1,0 +1,86 @@
+mixin skills()
+
+    -
+        var skills = [
+            {
+                'name': 'БЭМ/OOCSS',
+                'checked': 'true'  
+            },
+            {      
+                'name': 'Gulp/GRUNT',
+                'checked': 'true' 
+            },
+            {   
+                'name': 'Использую Git',
+                'checked': 'true' 
+            },
+            {   
+                'name': 'Pug (Jade)',
+                'checked': 'true'
+            },
+            {   
+                'name': 'Webpack'
+            },
+            {   
+                'name': '<span>С глазомером</span> <span>всё</span> <span>ок</span>',
+                'checked': 'true'
+            },
+            {   
+                'name': 'Stylus/LESS/SASS',
+                'checked': 'true' 
+            },
+            {   
+                'name': 'Дружу с WebGL'
+            },
+            {   
+                'name': 'Читаю <a href="#">blog.csssr.ru</a>'
+            },
+            {   
+                'name': 'Работаю с SVG',
+                'checked': 'true'
+            },
+            {   
+                'name': 'jQuery',
+                'checked': 'true'
+            },
+            {   
+                'name': 'Я ленивый(-ая)'
+            },
+            {   
+                'name': 'Верстаю семантично',
+                'checked': 'true'
+            },
+            {   
+                'name': 'Знаю/изучаю Angular'
+            },
+            {   
+                'name': 'У меня хороший английский'
+            },
+            {   
+                'name': 'Accessibility (A11Y)'
+            },
+            {   
+                'name': 'Знаю/изучаю React'
+            },
+            {   
+                'name': 'ES2015/ES2016'
+            },
+            {   
+                'name': 'Знаю/изучаю Node.js'
+            },
+            
+            
+            
+            
+        ]
+
+    section.skills
+        h2.skills__title.title Расскажите о себе чекбоксами
+        p.skills__descr.descr Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+        .skills__list
+            each val in skills
+                label.skills__item
+                    input(type="checkbox" checked=val.checked).skills__item-input
+                    span.skills__checkbox 
+                    div!= val.name
+                    

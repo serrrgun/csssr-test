@@ -1,0 +1,38 @@
+mixin about()
+
+    -
+        var about = [
+            {
+                'name': 'name',
+                'label': 'Полное ФИО',
+                'value': 'Турищев Сергей Викторович'
+            },
+            {
+                'name': 'date',
+                'label': 'Год рождения',
+                'value': '1987'
+            },
+            {
+                'name': 'place',
+                'label': 'Место жительства',
+                'value': 'г. Новополоцк, Беларусь'
+            },
+            {
+                'name': 'skype',
+                'label': 'Скайп',
+                'value': 'live: a0207b3e5abc687f'
+            },
+            {
+                'name': 'mail',
+                'label': 'Почта',
+                'value': 'serrrgun@mail.ru'
+            },
+        ];
+
+    section.about
+        h2.visually-hidden Блок о себе 
+        each val in about
+            .about__item-wrapper
+                span.about__label!= val.label
+                span.about__desc!= val.value
+            
